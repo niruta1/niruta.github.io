@@ -1,64 +1,114 @@
-h1.ml8 {
-  font-weight: 900;
-  font-size: 4.5em;
-  color: #fff;
-  width: 3em;
-  height: 3em;
+@import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
+.wrapper {
+  width: 100vw;
+  text-align: center;
 }
 
-.ml8 .letters-container {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  height: 1em;
-}
-
-.ml8 .letters {
-  position: relative;
-  z-index: 2;
+.wrapper span {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #3e5264;
+  font-size: 100px;
+  text-shadow: 0 0px #f3c623, 0 0px #f2aaaa;
+  -webkit-transform: translate(0, 100%) rotate(4deg);
+          transform: translate(0, 100%) rotate(4deg);
+  -webkit-animation: jump 2s ease-in-out infinite;
+          animation: jump 2s ease-in-out infinite;
   display: inline-block;
-  line-height: 0.7em;
-  right: -0.12em;
-  top: -0.2em;
+  font-family: "Titan One", cursive;
+  color: #fff;
 }
 
-.ml8 .bang {
-  font-size: 1.4em;
-  top: auto;
-  left: -0.06em;
+.wrapper span:nth-child(1) {
+  -webkit-animation-delay: 120ms;
+          animation-delay: 120ms;
 }
 
-.ml8 .circle {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 0;
-  bottom: 0;
+.wrapper span:nth-child(2) {
+  -webkit-animation-delay: 240ms;
+          animation-delay: 240ms;
 }
 
-.ml8 .circle-white {
-  width: 3em;
-  height: 3em;
-  border: 2px dashed white;
-  border-radius: 2em;
+.wrapper span:nth-child(3) {
+  -webkit-animation-delay: 360ms;
+          animation-delay: 360ms;
 }
 
-.ml8 .circle-dark {
-  width: 2.2em;
-  height: 2.2em;
-  background-color: #4f7b86;
-  border-radius: 3em;
-  z-index: 1;
+.wrapper span:nth-child(4) {
+  -webkit-animation-delay: 480ms;
+          animation-delay: 480ms;
 }
 
-.ml8 .circle-dark-dashed {
-  border-radius: 2.4em;
-  background-color: transparent;
-  border: 2px dashed #4f7b86;
-  width: 2.3em;
-  height: 2.3em;
+.wrapper span:nth-child(5) {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+
+.wrapper span:nth-child(6) {
+  -webkit-animation-delay: 720ms;
+          animation-delay: 720ms;
+}
+
+.wrapper span:nth-child(7) {
+  -webkit-animation-delay: 840ms;
+          animation-delay: 840ms;
+}
+
+@-webkit-keyframes jump {
+  33% {
+    text-shadow: 0 60px #f37121, 0 150px #f2aaaa;
+  }
+  50% {
+    -webkit-transform: translate(0, 0) rotate(-4deg);
+            transform: translate(0, 0) rotate(-4deg);
+    text-shadow: 0 0px #8fc0a9, 0 0px #84a9ac;
+  }
+  66.67% {
+    text-shadow: 0 -60px #d54062, 0 -150px #8fc0a9;
+  }
+}
+
+@keyframes jump {
+  33% {
+    text-shadow: 0 60px #f37121, 0 150px #f2aaaa;
+  }
+  50% {
+    -webkit-transform: translate(0, 0) rotate(-4deg);
+            transform: translate(0, 0) rotate(-4deg);
+    text-shadow: 0 0px #8fc0a9, 0 0px #84a9ac;
+  }
+  66.67% {
+    text-shadow: 0 -60px #d54062, 0 -150px #8fc0a9;
+  }
+}
+
+html {
+  width: 100%;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: lavender;
+}
+
+@media screen and (max-height: 200px) {
+  .wrapper {
+    -webkit-transform: scale(0.3, 0.3);
+            transform: scale(0.3, 0.3);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .wrapper span {
+    font-size: 50px;
+  }
 }
